@@ -3,7 +3,7 @@
 require 'twitter'
 require './spotify-tweet-data.rb'
 
-curr_track = eval `/usr/bin/osascript #{ENV['home_dir']}/Documents/spotify-now-playing.scpt`
+curr_track = eval `/usr/bin/osascript spotify-now-playing.scpt`
 
 Twitter.configure do |config|
   config.consumer_key = ENV['consumer_key']

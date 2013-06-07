@@ -12,13 +12,10 @@ TweetStream.configure do |config|
 end
 
 client = TweetStream::Client.new
-#client = TweetStream::Daemon.new
 
 client.userstream do |status|
-  #track = status.text.sub(/^NOW PLAYING: /, '').sub(/by.*$/, '')
-  #artist = status.text.sub(/^NOW PLAYING:.*by /, '').sub(/,.*$/, '') 
   uri = status.text.sub(/^NOW PLAYING:.*, /, 'spotify:track:')
-  #`/usr/bin/osascript spotify-play-track.scpt #{uri}`
+  `/usr/bin/osascript spotify-play-track.scpt #{uri}`
   puts status.text.sub(/, #{uri.split(':').last}/, '')
 end
 

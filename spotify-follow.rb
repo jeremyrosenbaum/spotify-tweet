@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'tweetstream'
+require 'terminal-notifier'
 require './spotify-follow-data.rb'
 
 TweetStream.configure do |config|
@@ -16,6 +17,7 @@ client = TweetStream::Client.new
 client.userstream do |status|
   uri = status.text.sub(/^NOW PLAYING:.*, /, 'spotify:track:')
   `/usr/bin/osascript spotify-play-track.scpt #{uri}`
-  puts status.text.sub(/, #{uri.split(':').last}/, '')
+  notice = status.text.sub(/, #{uri.split(':').last}/, '')
+  TerminalNotifier.notify(notice)
 end
 

@@ -5,7 +5,7 @@ At one of my previous jobs, we had a tradition of collectively playing music eve
 
 To keep some semblance of Music Friday going, I started up a Spotify playlist that anyone could add to and played it on shuffle over some external speakers at HQ.  Our colleagues in the remote office, who always joined us on turntable.fm, were less than enthused.  They could access the playlist, but they couldn't listen to what we were listening to in real time.
 
-So, I hacked together a quick, but effective, solution using Ruby, Applescript and Twitter so that the remote folks could listen along.
+So, I hacked together a quick, but effective, solution using Ruby, Applescript and Twitter so that the remote folks could listen along.  It's been dormant for awhile, but the Twitter account we used is still up.  You can check [https://twitter.com/musicfridays](https://twitter.com/musicfridays) if you want to see what the end result looks like.
 
 Obviously, due to the Applescript piece, this only works on Mac.
 
